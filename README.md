@@ -28,7 +28,7 @@ Both platforms share the same TinyAudioDecoder.h header file. However to access 
 TINYAD_RESULT Initialize(const char* file, int sampleRate, bool stereo, TinyAudioDecoderBuffer *dstBuffer, void *platormExtras);
 ```
 
-Android extras:
+**Android extras:**
 
 ``` cpp
 struct TinyAudioDecoderAndroidExtras {
@@ -38,7 +38,7 @@ struct TinyAudioDecoderAndroidExtras {
 };
 ```
 
-iOS extras:
+**iOS extras:**
 
 ``` cpp
 struct TinyAudioDecoderIosExtras {
@@ -46,7 +46,7 @@ struct TinyAudioDecoderIosExtras {
 };
 ```
 
-Destination buffer:
+**Destination buffer:**
 
 ``` cpp
 struct TinyAudioDecoderBuffer {
@@ -105,6 +105,49 @@ if(decoder->Initialize(file, 44100, true, &dstBuffer, &platformExtras) == TINYAD
         }
     }
 }
+
+delete decoder;
+```
+
+### Example, read 2048 frames at a time
+
+``` cpp
+TinyAudioDecoderIosExtras platformExtras;
+platformExtras.bundle = CFBundleGetMainBundle();
+
+TinyAudioDecoderBuffer dstBuffer;
+int channelDataSize = sizeof(TinyAudioDecoderSampleType) * 2048;
+
+dstBuffer.channelDataSize = channelDataSize;
+dstBuffer.leftChannelData = malloc(channelDataSize);
+dstBuffer.rightChannelData = malloc(channelDataSize);
+
+TinyAudioDecoder *decoder = new TinyAudioDecoder();
+
+if(decoder->Initialize(file, 44100, true, &dstBuffer, &platformExtras) == TINYAD_RESULT_SUCCESS) {
+    int frameCount = 0;
+    do {
+        TINYAD_RESULT result = decoder->ReadFrames(frameCount);
+
+        if(result == TINYAD_RESULT_SUCCESS) {
+            // Copy frames to a circular buffer or do something with the data
+            // dstBuffer.leftChannelData and dstBuffer.rightChannelData
+            LOGD("Got %d frames of audio data", frameCount);
+        }
+        else {
+            if(result == TINYAD_RESULT_EOF) {
+                LOGD("End of file reached");
+            }
+            else {
+                LOGD("Error %d occured", result);
+            }
+            break;
+        }
+    } while(frameCount > 0);
+}
+
+free(dstBuffer.leftChannelData);
+free(dstBuffer.rightChannelData);
 
 delete decoder;
 ```
