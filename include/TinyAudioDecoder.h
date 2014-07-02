@@ -26,7 +26,7 @@ struct TinyAudioDecoderBuffer {
 
 typedef unsigned int TINYAD_RESULT;
 
-#define TINYAD_VERSION 0x00000901 // 0x00 HI ME LO
+#define TINYAD_VERSION 0x00000902 // 0x00 HI ME LO
 
 #define TINYAD_RESULT_SUCCESS               ((TINYAD_RESULT) 0x0000)
 #define TINYAD_RESULT_EOF                   ((TINYAD_RESULT) 0x0001)
