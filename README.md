@@ -16,19 +16,21 @@ Tiny Audio Decoder is not thread safe. You should not access it from multiple th
 
 ### Testing
 
-Basic functionality has been tested with the following devices.
+Basic functionality has been tested with the following Android devices.
 
-Samsung Galaxy S5 (SAMSUNG-SM-G900A, 4.4.2) - OK
-LG (Nexus 5, 4.4) - OK
-Sony XPERIA (C6604, 4.1.2) - OK
-LG E975 (LG-E975, 4.1.2) - OK
-Samsung S ADVANCE (GT-I9070, 4.1.2) - OK
-Samsung DUOS (GT-S7562, 4.0.4) - OK
-LG Google (Galaxy Nexus, 4.3) - OK
-Samsung (GT-I9100, 4.1.2) - OK
-Pantech VEGA (IM-A870L, 4.1.2) - OK
-Samsung Galaxy Note (GT-N7000, 4.1.2) - OK
-Samsung (GT-I8160, 4.1.2) - OK
+Device | Android version | Result
+--- | --- | ---
+Samsung Galaxy S5, SAMSUNG-SM-G900A | 4.4.2 | OK
+LG Nexus 5 | 4.4 | OK
+Sony XPERIA C6604 | 4.1.2 | OK
+LG LG-E975 | 4.1.2 | OK
+Samsung S ADVANCE, GT-I9070 | 4.1.2 | OK
+Samsung DUOS, GT-S7562 | 4.0.4 | OK
+LG Google, Galaxy Nexus | 4.3 | OK
+Samsung, GT-I9100 | 4.1.2 | OK
+Pantech VEGA, IM-A870L | 4.1.2 | OK
+Samsung Galaxy Note, GT-N7000 | 4.1.2 | OK
+Samsung GT-I8160 | 4.1.2 | OK
 
 ### Usage
 
