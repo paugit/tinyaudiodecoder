@@ -31,6 +31,14 @@ Samsung, GT-I9100 | 4.1.2 | OK
 Pantech VEGA, IM-A870L | 4.1.2 | OK
 Samsung Galaxy Note, GT-N7000 | 4.1.2 | OK
 Samsung GT-I8160 | 4.1.2 | OK
+Samsung Nexus-S | 4.1.2 | OK
+Samsung Galaxy S4, GT-I9505 | 4.3 | OK
+Samsung GT-I8190N | 4.1.2 | OK
+Samsung Galaxy Grand, GT-I9082 | 4.2.2 | OK
+Samsung GT-I9300 | 4.1.2 | OK
+LG Nexus 4 | 4.4.2 | OK
+Huawei P6-U06 | 4.2.2 | OK
+LG Optimus L5, LG-E460 | 4.12 | OK
 
 ### Usage
 
