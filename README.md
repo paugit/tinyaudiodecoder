@@ -18,6 +18,8 @@ Tiny Audio Decoder is not thread safe. You should not access it from multiple th
 
 Basic functionality has been tested with the following Android devices.
 
+#### Armv7 devices
+
 Device | Android version | Result
 --- | --- | ---
 Samsung Galaxy S5, SAMSUNG-SM-G900A | 4.4.2 | OK
@@ -39,6 +41,12 @@ Samsung GT-I9300 | 4.1.2 | OK
 LG Nexus 4 | 4.4.2 | OK
 Huawei P6-U06 | 4.2.2 | OK
 LG Optimus L5, LG-E460 | 4.12 | OK
+
+#### x86 devices
+
+Device | Android version | Result
+--- | --- | ---
+Random | 4.4.4 | OK
 
 ### Usage
 
