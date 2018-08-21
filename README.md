@@ -102,7 +102,7 @@ Platform independent error codes are defined in the TinyAudioDecoder.h and platf
 
 ``` cpp
 // Use the main bundle
-TinyAudioDecoderIosExtras platformExtras;
+TinyAudioDecoderIosExtras platformExtras = {};
 platformExtras.bundle = CFBundleGetMainBundle();
 
 // Set channel data size to 0 to read all frames at once
@@ -142,7 +142,7 @@ delete decoder;
 ### Example, read 2048 frames at a time
 
 ``` cpp
-TinyAudioDecoderIosExtras platformExtras;
+TinyAudioDecoderIosExtras platformExtras = {};
 platformExtras.bundle = CFBundleGetMainBundle();
 
 TinyAudioDecoderBuffer dstBuffer;
